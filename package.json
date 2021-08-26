@@ -19,7 +19,8 @@
   "homepage": "https://github.com/TylerDurden75/Ecom-app#readme",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
