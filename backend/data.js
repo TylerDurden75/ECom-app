@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
       name: "Ipple smartphone reboot",
       category: "Phones",
       image: "/images/p1.jpg",
@@ -29,7 +28,6 @@ const data = {
       description: "Ipple smartphone reconditioned",
     },
     {
-      _id: "2",
       name: "Huowei smartphone reboot",
       category: "Phones",
       image: "/images/p2.jpg",
@@ -41,7 +39,6 @@ const data = {
       description: "Huowei smartphone reconditioned",
     },
     {
-      _id: "3",
       name: " Samsang smartphone reboot",
       category: "Phones",
       image: "/images/p3.jpg",
@@ -53,7 +50,6 @@ const data = {
       description: "Samsang smartphone reconditioned",
     },
     {
-      _id: "4",
       name: " Ipple laptop reboot",
       category: "Laptop",
       image: "/images/p4.jpg",
@@ -65,7 +61,6 @@ const data = {
       description: "Ipple laptop reconditioned",
     },
     {
-      _id: "5",
       name: "Dull laptop reboot",
       category: "Laptop",
       image: "/images/p5.jpg",
@@ -77,7 +72,6 @@ const data = {
       description: "Dull laptop reconditioned",
     },
     {
-      _id: "6",
       name: "MSA laptop reboot",
       category: "Laptop",
       image: "/images/p6.jpg",
