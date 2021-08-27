@@ -1,9 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 import ProductRouter from "./routers/ProductRouter.js";
 import UserRouter from "./routers/UserRouter.js";
 
+dotenv.config();
+
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/ecom", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
