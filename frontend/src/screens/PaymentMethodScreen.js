@@ -31,6 +31,7 @@ export default function PaymentMethodScreen(props) {
               id="paypal"
               value="PayPal"
               name="paymentMethod"
+              required
               checked
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></input>
