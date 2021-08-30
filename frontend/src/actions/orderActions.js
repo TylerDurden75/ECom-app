@@ -7,6 +7,8 @@ import {
   ORDER_DETAILS_FAIL,
   ORDER_DETAILS_REQUEST,
   ORDER_DETAILS_SUCCESS,
+  ORDER_MINE_LIST_FAIL,
+  ORDER_MINE_LIST_REQUEST,
   ORDER_PAYMENT_FAIL,
   ORDER_PAYMENT_REQUEST,
   ORDER_PAYMENT_SUCCESS,
@@ -78,3 +80,25 @@ export const payOrder =
       dispatch({ type: ORDER_PAYMENT_FAIL, payload: message });
     }
   };
+
+export const listOrderMine = () => async (dispatch, getState) => {
+  dispatch({ type: ORDER_MINE_LIST_REQUEST });
+  const {
+    userSignin: { userInfo },
+  } = getState();
+  try {
+    const { data } = await Axios.get("/api/orders/mine", {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    });
+    dispatch({ type: ORDER_PAYMENT_SUCCESS, payload: data });
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    dispatch({ type: ORDER_PAYMENT_FAIL, payload: message });
+    dispatch({ type: ORDER_MINE_LIST_FAIL });
+  }
+};
